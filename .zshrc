@@ -147,7 +147,7 @@ autoload bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
 complete -C '/usr/local/bin/aws_completer' aws 
 
-export PATH="/usr/local/opt/openjdk@17/bin:$PATH"
+export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
 
 # pyenv
 if command -v pyenv 1>/dev/null 2>&1; then
