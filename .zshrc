@@ -107,9 +107,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"export SDKROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
 
-# Open ServisBOT github PR
-alias openpr="gpsup && gh pr create -t $(git branch --show-current) && gh pr view --web"
-
 export PATH="~/.local/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/zlib/lib -L/usr/local/opt/bzip2/lib"
 export CPPFLAGS="-I/usr/local/opt/zlib/include -I/usr/local/opt/bzip2/include"
@@ -147,7 +144,10 @@ autoload bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
 complete -C '/usr/local/bin/aws_completer' aws 
 
+# java
 export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
 
 # pyenv
 if command -v pyenv 1>/dev/null 2>&1; then
