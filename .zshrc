@@ -80,7 +80,6 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-set -o vi
 
 # User configuration
 
@@ -135,10 +134,10 @@ export PATH="$PATH:$HOME/.local/bin"
 # go
 export PATH="$PATH:$HOME/go/bin"
 
-bindkey "[D" backward-word
-bindkey "[C" forward-word
-bindkey "^[a" beginning-of-line
-bindkey "^[e" end-of-line
+
+# key bindings
+bindkey '^ I'   complete-word       # tab          | complete
+bindkey '^ [[Z' autosuggest-accept  # shift + tab  | autosuggest
 
 # aws autocomplete
 autoload bashcompinit && bashcompinit
@@ -170,3 +169,5 @@ export LC_ALL=en_US.UTF-8
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
   exec tmux
 fi
+
+set -o vi
