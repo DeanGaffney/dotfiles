@@ -76,10 +76,11 @@ plugins=(
   zsh-autosuggestions
   jsontools
   node 
-  zsh-vi-mode
 )
 
 source $ZSH/oh-my-zsh.sh
+
+set -o vi
 
 # User configuration
 
