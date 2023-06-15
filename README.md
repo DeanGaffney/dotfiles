@@ -4,7 +4,7 @@ This repository contains all of the dotfiles I use for my environment
 ## Linking Dotfiles
 
 ### Prerequisites
-- `brew install stow`
 - `cd` into the root of this project
-- `stow --adpot .`
+- `bash install.sh`
+- This will create symbolic links for the configuration files in this repo to the correct locationso n the file system.
 
