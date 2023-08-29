@@ -106,6 +106,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"export SDKROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+#
 
 export PATH="~/.local/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/zlib/lib -L/usr/local/opt/bzip2/lib"
@@ -173,3 +174,20 @@ if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] &&
 fi
 
 set -o vi
+
+# functions
+function fw() {
+  cd $(find ~/workspace/work -type d -print -maxdepth 1 | fzf)
+}
+
+function vfw() {
+  cd $(find ~/workspace/work -type d -print -maxdepth 1 | fzf) && nvim
+}
+
+function fp() {
+  cd $(find ~/workspace/personal -type d -print -maxdepth 1 | fzf)
+}
+
+function vfp() {
+  cd $(find ~/workspace/personal -type d -print -maxdepth 1 | fzf) && nvim
+}
