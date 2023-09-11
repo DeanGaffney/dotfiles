@@ -137,8 +137,6 @@ export PATH="$PATH:$HOME/go/bin"
 
 
 # key bindings
-bindkey '^ I'   complete-word       # tab          | complete
-bindkey '^ [[Z' autosuggest-accept  # shift + tab  | autosuggest
 
 # aws autocomplete
 autoload bashcompinit && bashcompinit
