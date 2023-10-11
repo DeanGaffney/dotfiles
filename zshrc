@@ -148,6 +148,9 @@ export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
 
+# emacs
+export PATH="$HOME/.config/emacs/bin:$PATH"
+
 # pyenv
 if command -v pyenv 1>/dev/null 2>&1; then
   # eval "$(pyenv init -)"
