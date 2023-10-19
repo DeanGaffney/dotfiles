@@ -154,6 +154,9 @@ export PATH="$HOME/.config/emacs/bin:$PATH"
 # notes
 export NOTES="$HOME/notes"
 
+# default editor
+export VISUAL="nvim"
+
 # pyenv
 if command -v pyenv 1>/dev/null 2>&1; then
   # eval "$(pyenv init -)"
