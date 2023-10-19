@@ -151,6 +151,9 @@ eval "$(jenv init -)"
 # emacs
 export PATH="$HOME/.config/emacs/bin:$PATH"
 
+# notes
+export NOTES="$HOME/notes"
+
 # pyenv
 if command -v pyenv 1>/dev/null 2>&1; then
   # eval "$(pyenv init -)"
