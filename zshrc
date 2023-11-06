@@ -106,7 +106,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"export SDKROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
-#
 
 export PATH="~/.local/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/zlib/lib -L/usr/local/opt/bzip2/lib"
@@ -181,6 +180,8 @@ if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] &&
 fi
 
 set -o vi
+
+alias syncnotes="cd $NOTES && gaa && git commit -m 'chore: backup' && git push"
 
 # functions
 function fw() {
