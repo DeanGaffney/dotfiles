@@ -138,17 +138,14 @@ export PATH="$PATH:$HOME/go/bin"
 # key bindings
 
 # aws autocomplete
-autoload bashcompinit && bashcompinit
-autoload -Uz compinit && compinit
-complete -C '/opt/homebrew/bin/aws_completer' aws 
+#autoload bashcompinit && bashcompinit
+#autoload -Uz compinit && compinit
+#complete -C '/opt/homebrew/bin/aws_completer' aws 
 
 # java
 export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
-
-# emacs
-export PATH="$HOME/.config/emacs/bin:$PATH"
 
 # notes
 export NOTES="$HOME/notes"
