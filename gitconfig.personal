@@ -2,6 +2,9 @@
 email = deanpatrickgaffney@gmail.com
 name = Dean Gaffney
 
+[pull]
+    ff = only
+
 [core]
     pager = delta
 
@@ -10,10 +13,9 @@ name = Dean Gaffney
 
 [delta]
     navigate = true    # use n and N to move between diff sections
+    line-numbers = true
+    plus-style = green bold
 
-    # delta detects terminal colors automatically; set one of these to disable auto-detection
-    # dark = true
-    # light = true
 
 [merge]
     conflictstyle = diff3
