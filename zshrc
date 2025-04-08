@@ -1,20 +1,7 @@
-# Amazon Q pre block. Keep at the top of this file.
-[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-function load-nvm {
-  export NVM_DIR=~/.nvm
-  source ~/.nvm/nvm.sh
-}
-
-# nvm
-if [[ "x${TERM_PROGRAM}" = "xvscode" ]]; then 
-  echo 'in vscode, nvm not work; use `load-nvm`';
-else 
-  load-nvm
-fi
-
+export NVM_DIR=~/.nvm
+source ~/.nvm/nvm.sh
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -86,7 +73,7 @@ ENABLE_CORRECTION="true"
 plugins=(
   git
   zsh-syntax-highlighting
-  # zsh-autosuggestions
+  zsh-autosuggestions
   jsontools
   node 
 )
@@ -156,9 +143,10 @@ export PATH="$PATH:$HOME/go/bin"
 #complete -C '/opt/homebrew/bin/aws_completer' aws 
 
 # java
-export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
+# export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
+# jenv enable-plugin export
 
 # notes
 export NOTES="$HOME/notes"
@@ -194,7 +182,6 @@ set -o vi
 alias syncnotes="cd $NOTES && gaa && git commit -m 'chore: backup' && git push"
 
 # functions
-
 function fw() {
   cd $(find ~/workspace/work -type d -print -maxdepth 1 | fzf)
 }
@@ -211,5 +198,5 @@ function vfp() {
   cd $(find ~/workspace/personal -type d -print -maxdepth 1 | fzf) && nvim
 }
 
-# Amazon Q post block. Keep at the bottom of this file.
-[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
+# Source the devops-cli configuration file
+source /Users/dgaffney/.devopsclirc
