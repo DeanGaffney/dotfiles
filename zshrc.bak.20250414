@@ -1,4 +1,5 @@
 # If you come from bash you might have to change your $PATH.
+# Prioritize /usr/local/bin for AWS CLI v2
 export PATH=/usr/local/bin:$HOME/bin:$PATH
 export NVM_DIR=~/.nvm
 source ~/.nvm/nvm.sh
@@ -154,11 +155,17 @@ export NOTES="$HOME/notes"
 # default editor
 export VISUAL="nvim"
 
+# AWS CLI v2 - explicitly add to PATH before pyenv
+export PATH="/usr/local/bin:$PATH"
+
 # pyenv
 if command -v pyenv 1>/dev/null 2>&1; then
   # eval "$(pyenv init -)"
   eval "$(pyenv init --path)"
 fi
+
+# Create alias for AWS CLI v1 if needed
+alias aws1="/Users/dgaffney/.pyenv/shims/aws"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -201,7 +208,3 @@ function vfp() {
 
 # Source the devops-cli configuration file
 source /Users/dgaffney/.devopsclirc
-
-# AWS CLI v2 configuration
-export PATH="/usr/local/bin:$PATH"
-
