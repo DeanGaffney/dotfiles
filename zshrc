@@ -1,4 +1,3 @@
-# If you come from bash you might have to change your $PATH.
 export PATH=/usr/local/bin:$HOME/bin:$PATH
 export NVM_DIR=~/.nvm
 source ~/.nvm/nvm.sh
@@ -44,7 +43,7 @@ ZSH_THEME="robbyrussell"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -134,14 +133,6 @@ export PATH="$PATH:$HOME/.local/bin"
 # go
 export PATH="$PATH:$HOME/go/bin"
 
-
-# key bindings
-
-# aws autocomplete
-#autoload bashcompinit && bashcompinit
-#autoload -Uz compinit && compinit
-#complete -C '/opt/homebrew/bin/aws_completer' aws 
-
 # java
 # export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
 export PATH="$HOME/.jenv/bin:$PATH"
@@ -173,9 +164,9 @@ export LC_ALL=en_US.UTF-8
 for f in ~/.config/work/*; do source $f; done
 
 # start tmux as soon as the shell is opened
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-  exec tmux
-fi
+# if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+#   exec tmux
+# fi
 
 set -o vi
 
@@ -204,4 +195,3 @@ source /Users/dgaffney/.devopsclirc
 
 # AWS CLI v2 configuration
 export PATH="/usr/local/bin:$PATH"
-
