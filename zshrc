@@ -171,7 +171,6 @@ for f in ~/.config/work/*; do source $f; done
 set -o vi
 
 alias syncnotes="cd $NOTES && gaa && git commit -m 'chore: backup' && git push"
-alias kill-old-tmux-sessions="tmux list-sessions | grep -v \"attached\" | awk '{print $1}' | tr -d \":\" | xargs -I {} tmux kill-ses -t {}"
 
 # functions
 function fw() {
