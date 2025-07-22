@@ -12,7 +12,7 @@ config.initial_rows = 28
 
 -- or, changing the font size and color scheme.
 config.font_size = 20
-config.color_scheme = "tokyonight"
+config.color_scheme = "Monokai (dark) (terminal.sexy)"
 
 -- Window opacity (0.0 = fully transparent, 1.0 = fully opaque)
 config.window_background_opacity = 0.85
