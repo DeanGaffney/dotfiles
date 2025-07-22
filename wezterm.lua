@@ -44,22 +44,22 @@ config.keys = {
   -- Vim-style pane navigation with CMD+hjkl
   {
     key = "h",
-    mods = "CMD",
+    mods = "CMD|SHIFT",
     action = wezterm.action.ActivatePaneDirection("Left"),
   },
   {
     key = "j",
-    mods = "CMD",
+    mods = "CMD|SHIFT",
     action = wezterm.action.ActivatePaneDirection("Down"),
   },
   {
     key = "k",
-    mods = "CMD",
+    mods = "CMD|SHIFT",
     action = wezterm.action.ActivatePaneDirection("Up"),
   },
   {
     key = "l",
-    mods = "CMD",
+    mods = "CMD|SHIFT",
     action = wezterm.action.ActivatePaneDirection("Right"),
   },
   -- QuickSelect mode for selecting and opening links
