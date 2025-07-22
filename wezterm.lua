@@ -31,6 +31,16 @@ config.keys = {
     mods = "CMD|SHIFT",
     action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
   },
+  {
+    key = "p",
+    mods = "CMD|SHIFT",
+    action = wezterm.action.ActivateCommandPalette,
+  },
+  {
+    key = "x",
+    mods = "CMD|SHIFT",
+    action = wezterm.action.ActivateCopyMode,
+  },
   -- Vim-style pane navigation with CMD+hjkl
   {
     key = "h",
