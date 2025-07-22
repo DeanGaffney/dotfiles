@@ -62,6 +62,22 @@ config.keys = {
     mods = "CMD",
     action = wezterm.action.ActivatePaneDirection("Right"),
   },
+  -- QuickSelect mode for selecting and opening links
+  {
+    key = "u",
+    mods = "CMD|SHIFT",
+    action = wezterm.action.QuickSelectArgs({
+      label = "open url",
+      patterns = {
+        "https?://\\S+",
+        "file://\\S+",
+      },
+      action = wezterm.action_callback(function(window, pane)
+        local url = window:get_selection_text_for_pane(pane)
+        wezterm.open_with(url)
+      end),
+    }),
+  },
 }
 
 -- Finally, return the configuration to wezterm:
