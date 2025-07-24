@@ -17,6 +17,10 @@ config.color_scheme = "Monokai (dark) (terminal.sexy)"
 -- Window opacity (0.0 = fully transparent, 1.0 = fully opaque)
 config.window_background_opacity = 0.85
 
+-- Enable composed key handling for Option key (fixes Option+3 for hashtag)
+config.send_composed_key_when_left_alt_is_pressed = true
+config.send_composed_key_when_right_alt_is_pressed = true
+
 -- Key bindings
 config.keys = {
   -- Toggles the current pane full screen or back to split
