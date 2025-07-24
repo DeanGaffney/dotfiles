@@ -19,7 +19,12 @@ config.window_background_opacity = 0.85
 
 -- Key bindings
 config.keys = {
-  -- Create vertical pane with cmd+shift+|
+  -- Toggles the current pane full screen or back to split
+  {
+    key = "m",
+    mods = "CMD|SHIFT",
+    action = wezterm.action.TogglePaneZoomState,
+  },
   {
     key = "|",
     mods = "CMD|SHIFT",
