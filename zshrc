@@ -194,3 +194,9 @@ source /Users/dgaffney/.devopsclirc
 
 # AWS CLI v2 configuration
 export PATH="/usr/local/bin:$PATH"
+
+[[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"
+
+fpath+=~/.zfunc; autoload -Uz compinit; compinit
+
+zstyle ':completion:*' menu select
