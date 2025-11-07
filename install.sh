@@ -23,3 +23,6 @@ link_file() {
 # Create symlinks
 link_file "$DOTFILES_DIR/zshrc" "$HOME/.zshrc"
 link_file "$DOTFILES_DIR/wezterm.lua" "$HOME/.wezterm.lua"
+
+# Note: .gitconfig is copied (not symlinked) by the ansible playbook
+# and then includes either .gitconfig.personal or .gitconfig.work
