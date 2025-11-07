@@ -190,7 +190,7 @@ function vfp() {
 }
 
 # Source the devops-cli configuration file
-source /Users/dgaffney/.devopsclirc
+source $HOME/.devopsclirc
 
 # AWS CLI v2 configuration
 export PATH="/usr/local/bin:$PATH"

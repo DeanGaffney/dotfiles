@@ -22,5 +22,4 @@ link_file() {
 
 # Create symlinks
 link_file "$DOTFILES_DIR/zshrc" "$HOME/.zshrc"
-link_file "$DOTFILES_DIR/gitconfig.personal" "$HOME/.gitconfig.personal"
 link_file "$DOTFILES_DIR/wezterm.lua" "$HOME/.wezterm.lua"
