@@ -161,7 +161,7 @@ PROMPT='%{$fg[cyan]%}%d%{$reset_color%} $(git_prompt_info)'
 
 export LC_ALL=en_US.UTF-8
 
-for f in ~/.config/work/*; do source $f; done
+[ -d ~/.config/work ] && for f in ~/.config/work/*; do source $f; done
 
 # start tmux as soon as the shell is opened
 # if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
@@ -190,7 +190,7 @@ function vfp() {
 }
 
 # Source the devops-cli configuration file
-source $HOME/.devopsclirc
+[ -f "$HOME/.devopsclirc" ] && source $HOME/.devopsclirc
 
 # AWS CLI v2 configuration
 export PATH="/usr/local/bin:$PATH"
