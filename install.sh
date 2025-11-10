@@ -24,5 +24,9 @@ link_file() {
 link_file "$DOTFILES_DIR/zshrc" "$HOME/.zshrc"
 link_file "$DOTFILES_DIR/wezterm.lua" "$HOME/.wezterm.lua"
 
+# Create .aws directory if it doesn't exist
+mkdir -p "$HOME/.aws"
+link_file "$DOTFILES_DIR/aws-config" "$HOME/.aws/config"
+
 # Note: .gitconfig is copied (not symlinked) by the ansible playbook
 # and then includes either .gitconfig.personal or .gitconfig.work
