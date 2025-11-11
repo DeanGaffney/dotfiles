@@ -26,7 +26,15 @@ link_file "$DOTFILES_DIR/wezterm.lua" "$HOME/.wezterm.lua"
 
 # Create .aws directory if it doesn't exist
 mkdir -p "$HOME/.aws"
-link_file "$DOTFILES_DIR/aws-config" "$HOME/.aws/config"
+
+# Copy aws-config (not symlinked) so work tools can modify it without affecting the repo
+if [ -f "$HOME/.aws/config" ]; then
+  echo "Backing up existing AWS config: $HOME/.aws/config -> $HOME/.aws/config.bak"
+  mv "$HOME/.aws/config" "$HOME/.aws/config.bak"
+fi
+
+cp "$DOTFILES_DIR/aws-config" "$HOME/.aws/config"
+echo "Copied AWS config to: $HOME/.aws/config"
 
 # Note: .gitconfig is copied (not symlinked) by the ansible playbook
 # and then includes either .gitconfig.personal or .gitconfig.work
