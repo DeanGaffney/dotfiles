@@ -96,8 +96,8 @@ function vfp() {
   cd $(find ~/workspace/personal -type d -print -maxdepth 1 | fzf) && nvim
 }
 
-function gb() {
-  git checkout $(git -P branch | fzf)
+function cob() {
+  git checkout $(git -P branch --all --format='%(refname:short)' | sed 's|^origin/||' | fzf)
 }
 
 # Source the devops-cli configuration file
