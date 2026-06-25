@@ -96,6 +96,10 @@ function vfp() {
   cd $(find ~/workspace/personal -type d -print -maxdepth 1 | fzf) && nvim
 }
 
+function gb() {
+  git checkout $(git -P branch | fzf)
+}
+
 # Source the devops-cli configuration file
 [ -f "$HOME/.devopsclirc" ] && source $HOME/.devopsclirc
 
